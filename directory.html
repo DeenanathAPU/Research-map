@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Research Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body data-page="directory">
+  <header class="site-header">
+    <div class="container">
+      <h1>Research Directory</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="map.html">Map</a>
+        <a href="directory.html">Directory</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <input id="search-input" type="text" placeholder="Search by name, theme, state..." />
+      <select id="filter-state">
+        <option value="">All States</option>
+      </select>
+      <select id="filter-theme">
+        <option value="">All Themes</option>
+      </select>
+    </section>
+
+    <section>
+      <table class="directory-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Title / Theme</th>
+            <th>Location</th>
+            <th>Supervisor</th>
+          </tr>
+        </thead>
+        <tbody id="directory-body">
+          <!-- Filled by script.js -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Cohort Research Atlas</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

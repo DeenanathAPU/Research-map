@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Research Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrxN1VFVpQxQ1M5Q8v+f26LuP3Q="
+    crossorigin=""
+  />
+  <!-- PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body data-page="map">
+  <header class="site-header">
+    <div class="container">
+      <h1>Research Map</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="map.html">Map</a>
+        <a href="directory.html">Directory</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <p>
+        Each marker represents a student's field site. Click on a marker to view details.
+      </p>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Master's in Development – Field Research Atlas</p>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script src="script.js"></script>
+</body>
+</html>

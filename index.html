@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cohort Research Atlas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- PapaParse for CSV parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body data-page="index">
+  <header class="site-header">
+    <div class="container">
+      <h1>Cohort Research Atlas</h1>
+      <p>Master's in Development – Field Research Across India</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="map.html">Map</a>
+        <a href="directory.html">Directory</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>About this Atlas</h2>
+      <p>
+        This digital atlas visualises the field research of our cohort across India. 
+        Each point represents a student, their field site, and their research theme.
+      </p>
+    </section>
+
+    <section class="stats-grid">
+      <div class="card">
+        <h3>Total Researchers</h3>
+        <p id="stat-total-researchers">–</p>
+      </div>
+      <div class="card">
+        <h3>States Covered</h3>
+        <p id="stat-total-states">–</p>
+      </div>
+      <div class="card">
+        <h3>Thematic Areas</h3>
+        <p id="stat-total-themes">–</p>
+      </div>
+    </section>
+
+    <section class="cta-grid">
+      <a href="map.html" class="cta-card">
+        <h3>View the Map</h3>
+        <p>Explore field sites geographically and see where your cohort is working.</p>
+      </a>
+      <a href="directory.html" class="cta-card">
+        <h3>Browse the Directory</h3>
+        <p>Search by name, theme, state, or supervisor.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Created by the Master's in Development cohort.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
