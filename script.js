@@ -2,7 +2,7 @@
 
 // TODO: replace with your actual published CSV URL from Google Sheets
 // Google Sheets -> File -> Share -> Publish to web -> Link -> CSV
-const DATA_URL = "https://apu20-my.sharepoint.com/:x:/r/personal/deenanath_sahu24_dev_apu_edu_in/_layouts/15/Doc.aspx?sourcedoc=%7B1B470590-CB29-4F6D-A9B4-34FC74F0142B%7D&file=_WFP_%20Interactive%20Map%20(Responses)%20-%20Form%20responses%201.csv&action=default&mobileredirect=true";
+const DATA_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTf6gPz76QKhDDv_2CdhyK3MQI7fnmrW8YfBRlxaBCepLuStKID2kfaUXeZWnuQvWaDMyskz5vy6SQ8/pubhtml";
 
 let researchData = [];
 
@@ -307,6 +307,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initProfilePage();
   }
 });
+
 
 
 
