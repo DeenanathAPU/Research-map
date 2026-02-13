@@ -2,7 +2,7 @@
 
 // TODO: replace with your actual published CSV URL from Google Sheets
 // Google Sheets -> File -> Share -> Publish to web -> Link -> CSV
-const DATA_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTf6gPz76QKhDDv_2CdhyK3MQI7fnmrW8YfBRlxaBCepLuStKID2kfaUXeZWnuQvWaDMyskz5vy6SQ8/pubhtml";
+const DATA_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTf6gPz76QKhDDv_2CdhyK3MQI7fnmrW8YfBRlxaBCepLuStKID2kfaUXeZWnuQvWaDMyskz5vy6SQ8/pub?output=csv";
 
 let researchData = [];
 
@@ -307,6 +307,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initProfilePage();
   }
 });
+
 
 
 
