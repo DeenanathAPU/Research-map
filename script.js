@@ -73,52 +73,27 @@ function initIndexPage() {
 }
 
 /* ---------------- MAP PAGE ---------------- */
+let researchData = [];
 
-function initMapPage() {
-  const mapContainer = document.getElementById("map");
-  if (!mapContainer) return;
+Papa.parse("data/research.csv", {
+  download: true,
+  header: true,
+  complete: function (results) {
+    researchData = results.data.map((row) => ({
+      id: row.id,
+      name: row.name,
+      title: row.title,
+      village: row.village,
+      district: row.district,
+      state: row.state,
+      latitude: parseFloat(row.latitude),
+      longitude: parseFloat(row.longitude),
+    }));
 
-  // Default centre on India
-  const map = L.map("map").setView([22.5, 79], 5);
+    initMapPage(); // IMPORTANT — call map after data loads
+  },
+});
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 18,
-    attribution: "&copy; OpenStreetMap contributors",
-  }).addTo(map);
-
-  const markers = [];
-  researchData.forEach((d) => {
-    if (!d.latitude || !d.longitude || isNaN(d.latitude) || isNaN(d.longitude)) {
-      return;
-    }
-
-    const popupHtml = `
-      <div>
-        <strong>${d.name || "Unnamed"}</strong><br/>
-        <em>${d.title || d.theme || ""}</em><br/>
-        ${(d.village || "") && (d.district || "") ? `${d.village}, ${d.district}<br/>` : ""}
-        ${d.state || ""}<br/>
-        ${
-          d.id
-            ? `<a href="profile.html?id=${encodeURIComponent(
-                d.id
-              )}">View profile</a>`
-            : ""
-        }
-      </div>
-    `;
-
-    const marker = L.marker([d.latitude, d.longitude]).addTo(map);
-    marker.bindPopup(popupHtml);
-    markers.push(marker);
-  });
-
-  // Fit bounds to markers
-  if (markers.length > 0) {
-    const group = L.featureGroup(markers);
-    map.fitBounds(group.getBounds().pad(0.2));
-  }
-}
 
 /* ---------------- DIRECTORY PAGE ---------------- */
 
@@ -307,6 +282,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initProfilePage();
   }
 });
+
 
 
 
